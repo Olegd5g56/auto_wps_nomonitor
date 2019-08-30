@@ -24,7 +24,7 @@ def getMac(path):
 
 wifi=input("wifi adapter: ")
 
-os.system("sudo rm ap ; sudo iw dev wlp3s0u2 scan > ap")
+os.system("sudo rm ap ; sudo iw dev "+wifi+" scan > ap")
 macs=getMac("ap")
 p=0
 for i in macs:
